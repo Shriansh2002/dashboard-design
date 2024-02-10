@@ -16,7 +16,10 @@ const SidebarMenu = () => {
 
 	const handleActive = (idx: number) => {
 		setActive(idx);
-		router.push(`/${sidebarList[idx].title.toLowerCase()}`);
+		const formattedTitle = sidebarList[idx].title
+			.toLowerCase()
+			.replace(/ /g, "-");
+		router.push(`/${formattedTitle}`);
 	};
 
 	return (

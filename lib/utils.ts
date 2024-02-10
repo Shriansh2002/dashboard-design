@@ -7,8 +7,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getTheIndexOfCurrentPage(pathname: string): number {
+	const formattedPathname = pathname.replace(/-/g, " ");
 	const idx = sidebarList.findIndex((item) =>
-		pathname.includes(item.title.toLowerCase())
+		formattedPathname.includes(item.title.toLowerCase())
 	);
-	return idx || ActiveSidebarItem.Dashboard;
+	return idx !== -1 ? idx : ActiveSidebarItem.Dashboard;
 }
