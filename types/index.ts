@@ -16,4 +16,20 @@ type SidebarItemProps = {
 	onClick: () => void;
 };
 
-export type { LayoutProps, TSidebarList, SidebarItemProps };
+type TTabList = {
+	id: number;
+	title: string;
+	url: string;
+};
+
+type TabProps = {
+	tab: TTabList;
+};
+
+export type {
+	LayoutProps,
+	TSidebarList,
+	SidebarItemProps,
+	TTabList,
+	TabProps,
+};

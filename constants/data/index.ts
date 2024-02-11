@@ -1,4 +1,4 @@
-import { TSidebarList } from "@/types";
+import { TSidebarList, TTabList } from "@/types";
 
 import { BiHome } from "react-icons/bi";
 import { CiRoute } from "react-icons/ci";
@@ -34,7 +34,13 @@ const sidebarList: TSidebarList[] = [
 	},
 ];
 
-export { sidebarList };
+const tabList: TTabList[] = [
+	{ id: 0, title: "View Analytics", url: "/view" },
+	{ id: 1, title: "Manage Contests", url: "/manage" },
+	{ id: 2, title: "Award Bonuses", url: "/bonuses" },
+];
+
+export { sidebarList, tabList };
 
 export enum ActiveSidebarItem {
 	Dashboard = 0,

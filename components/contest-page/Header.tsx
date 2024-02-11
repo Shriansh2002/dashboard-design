@@ -4,7 +4,7 @@ import { IoNotificationsOffCircle } from "react-icons/io5";
 
 export const ContestsPageHeader = () => {
 	return (
-		<section className='flex justify-between '>
+		<header className='flex justify-between items-center'>
 			<h1 className='text-2xl font-normal text-[#25076B] font-serif'>
 				Contests
 			</h1>
@@ -45,6 +45,6 @@ export const ContestsPageHeader = () => {
 					<FaCaretDown className='text-purple-950 h-3 w-3' />
 				</button>
 			</div>
-		</section>
+		</header>
 	);
 };
