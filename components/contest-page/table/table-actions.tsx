@@ -3,14 +3,14 @@ import Filters from "../Filters";
 
 import { Contest, TableHelperProps } from "@/types";
 
-type TableActionsProps = TableHelperProps<Contest> & {
+type TableActionsProps<TData> = TableHelperProps<TData> & {
 	handleAddRow: (sampleData: Contest) => void;
 };
 
 export function TableActions<TData>({
 	table,
 	handleAddRow,
-}: TableActionsProps) {
+}: TableActionsProps<TData>) {
 	return (
 		<div className='flex justify-between items-center'>
 			<div className='flex gap-x-2'>
