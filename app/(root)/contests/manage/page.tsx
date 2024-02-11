@@ -1,4 +1,4 @@
-import Table from "@/components/contest-page/Table";
+import Table from "@/components/contest-page/table";
 
 export default function ContestsManagePage() {
 	return (

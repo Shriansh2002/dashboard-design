@@ -26,10 +26,23 @@ type TabProps = {
 	tab: TTabList;
 };
 
+type Contest = {
+	id: number;
+	name: string;
+	active: boolean;
+	validity: {
+		start: string;
+		end: string;
+	};
+	challenges: string[];
+	targetAudience: string[] | null;
+};
+
 export type {
 	LayoutProps,
 	TSidebarList,
 	SidebarItemProps,
 	TTabList,
 	TabProps,
+	Contest,
 };
