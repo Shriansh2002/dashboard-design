@@ -54,6 +54,19 @@ const Table = () => {
 			cell: ({ row }) => {
 				const activeStatus: boolean = row.getValue("active");
 
+				function handleActiveStatus(
+					id: number,
+					status: boolean
+				) {
+					const newData = data.map((item) => {
+						if (item.id === id) {
+							item.active = status;
+						}
+						return item;
+					});
+					setData(newData);
+				}
+
 				return (
 					<div className='text-right font-medium flex items-center gap-x-1'>
 						<span>Active</span>
@@ -63,7 +76,13 @@ const Table = () => {
 								value=''
 								className='sr-only peer'
 								checked={activeStatus}
-								readOnly
+								onClick={(e) => {
+									e.stopPropagation();
+									handleActiveStatus(
+										row.original.id,
+										!activeStatus
+									);
+								}}
 							/>
 							<div className="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-purple-300 dark:peer-focus:ring-purple-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-purple-900"></div>
 						</label>

@@ -44,7 +44,7 @@ export const tableData: Contest[] = [
 	{
 		id: 1,
 		name: "Rule with a simple name",
-		active: true,
+		active: false,
 		validity: {
 			start: "20 Jan 2022",
 			end: "20 Jul 2023",
@@ -119,7 +119,7 @@ export const tableData: Contest[] = [
 	{
 		id: 4,
 		name: "Rule with a fourth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "5 Apr 2022",
 			end: "5 Oct 2023",
@@ -169,7 +169,7 @@ export const tableData: Contest[] = [
 	{
 		id: 6,
 		name: "Rule with a sixth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "25 May 2022",
 			end: "25 Dec 2023",
@@ -244,7 +244,7 @@ export const tableData: Contest[] = [
 	{
 		id: 9,
 		name: "Rule with a ninth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "10 Aug 2022",
 			end: "10 Mar 2024",
@@ -319,7 +319,7 @@ export const tableData: Contest[] = [
 	{
 		id: 12,
 		name: "Rule with a twelfth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "25 Oct 2022",
 			end: "25 Jun 2024",
@@ -419,7 +419,7 @@ export const tableData: Contest[] = [
 	{
 		id: 16,
 		name: "Rule with a sixteenth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "5 Feb 2023",
 			end: "5 Oct 2024",
@@ -519,7 +519,7 @@ export const tableData: Contest[] = [
 	{
 		id: 20,
 		name: "Rule with a twentieth name",
-		active: true,
+		active: false,
 		validity: {
 			start: "15 May 2023",
 			end: "15 Feb 2025",
