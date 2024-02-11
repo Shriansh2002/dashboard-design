@@ -47,7 +47,7 @@ export function DataTable<TData, TValue>({
 	return (
 		<div className='mt-4'>
 			<TableActions table={table} handleAddRow={handleAddRow} />
-			<MainTable table={table} />
+			<MainTable table={table} columns={columns} />
 			<PaginationControls table={table} />
 		</div>
 	);

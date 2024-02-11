@@ -1,4 +1,4 @@
-import { type Table } from "@tanstack/react-table";
+import { ColumnDef, type Table } from "@tanstack/react-table";
 import { IconType } from "react-icons";
 
 type LayoutProps = Readonly<{
@@ -41,6 +41,7 @@ type Contest = {
 
 type TableHelperProps<TData> = {
 	table: Table<TData>;
+	columns?: ColumnDef<TData, any>[];
 };
 
 export type {

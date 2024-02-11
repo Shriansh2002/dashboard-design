@@ -10,9 +10,11 @@ import {
 	TableRow,
 } from "@/components/ui/table";
 import { flexRender } from "@tanstack/react-table";
-import { columns } from "./columns";
 
-export function MainTable<TData>({ table }: TableHelperProps<TData>) {
+export function MainTable<TData>({
+	table,
+	columns,
+}: TableHelperProps<TData>) {
 	return (
 		<div className='max-h-[370px] overflow-y-auto '>
 			<Table>
@@ -62,7 +64,9 @@ export function MainTable<TData>({ table }: TableHelperProps<TData>) {
 					) : (
 						<TableRow>
 							<TableCell
-								colSpan={columns.length}
+								colSpan={
+									(columns && columns.length) || 1
+								}
 								className='h-24 text-center'
 							>
 								No results.
