@@ -5,7 +5,7 @@ import React from "react";
 
 const ContestPageLayout = ({ children }: LayoutProps) => {
 	return (
-		<main className='bg-white w-full flex flex-col px-10 py-10'>
+		<main className='bg-[#FAF8FE] w-full flex flex-col px-10 py-10'>
 			<ContestsPageHeader />
 			<TabsView />
 
