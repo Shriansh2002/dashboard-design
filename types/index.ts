@@ -1,3 +1,4 @@
+import { type Table } from "@tanstack/react-table";
 import { IconType } from "react-icons";
 
 type LayoutProps = Readonly<{
@@ -38,6 +39,10 @@ type Contest = {
 	targetAudience: string[] | null;
 };
 
+type TableHelperProps<TData> = {
+	table: Table<TData>;
+};
+
 export type {
 	LayoutProps,
 	TSidebarList,
@@ -45,4 +50,5 @@ export type {
 	TTabList,
 	TabProps,
 	Contest,
+	TableHelperProps,
 };

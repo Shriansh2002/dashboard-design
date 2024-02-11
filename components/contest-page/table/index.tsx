@@ -1,22 +1,28 @@
-import { BiPlus } from "react-icons/bi";
-import Search from "../Search";
-import Filters from "../Filters";
-import { DataTable } from "./data-table";
-import { columns } from "./columns";
+"use client";
 import { Contest } from "@/types";
+import { columns } from "./columns";
+import { DataTable } from "./data-table";
 
 import { tableData } from "@/constants/data";
+import { useState } from "react";
+import { toast } from "sonner";
 
-async function getData(): Promise<Contest[]> {
-	return tableData;
-}
+const Table = () => {
+	const [data, setData] = useState<Contest[]>(tableData);
 
-const Table = async () => {
-	const data = await getData();
+	function handleAddRow(sampleData: Contest) {
+		setData([...data, sampleData]);
+
+		toast.success("Contest added successfully!");
+	}
 
 	return (
 		<div className='flex flex-col w-full bg-white rounded-md p-4 mt-4'>
-			<DataTable columns={columns} data={data} />
+			<DataTable
+				columns={columns}
+				data={data}
+				handleAddRow={handleAddRow}
+			/>
 		</div>
 	);
 };
